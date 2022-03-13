@@ -1,0 +1,271 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.cube__wrapper {
+  background: white;
+  height: 70vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-perspective: 800px;
+          perspective: 800px;
+}
+
+.cube {
+  -webkit-transform: rotateX(-30deg) rotateY(-45deg);
+          transform: rotateX(-30deg) rotateY(-45deg);
+  width: 200px;
+  height: 200px;
+  position: relative;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+.side {
+  border: 5px solid #44426b;
+  background-color: #3d304e;
+  width: 100%;
+  height: 100%;
+  font-size: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #e7b615;
+  position: absolute;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+
+.front {
+  -webkit-transform: translateZ(100px);
+          transform: translateZ(100px);
+}
+
+.back {
+  -webkit-transform: rotateY(180deg) translateZ(100px);
+          transform: rotateY(180deg) translateZ(100px);
+}
+
+.left {
+  -webkit-transform: rotateY(-90deg) translateZ(100px);
+          transform: rotateY(-90deg) translateZ(100px);
+}
+
+.right {
+  -webkit-transform: rotateY(90deg) translateZ(100px);
+          transform: rotateY(90deg) translateZ(100px);
+}
+
+.top {
+  -webkit-transform: rotateX(90deg) translateZ(100px);
+          transform: rotateX(90deg) translateZ(100px);
+}
+
+.bottom {
+  -webkit-transform: rotateX(-90deg) translateZ(100px);
+          transform: rotateX(-90deg) translateZ(100px);
+}
+
+.btn__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: white;
+  text-transform: uppercase;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.btn {
+  cursor: pointer;
+  border-radius: 20px;
+  font-size: 36px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  padding: 20px;
+  margin: 30px;
+  background-color: #4b9dbd;
+}
+
+.btn:hover {
+  background-color: #326377;
+}
+
+.popup {
+  position: absolute;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  background-color: #fff;
+  visibility: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.dice-faces {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.dice-face {
+  width: 150px;
+  height: 150px;
+  background-color: #3d304e;
+  border: 5px solid #44426b;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.face1,
+.face5,
+.face6 {
+  margin-top: 150px;
+}
+
+.face__input {
+  background: rgba(0, 0, 0, 0);
+  width: 140px;
+  height: 140px;
+  text-align: center;
+  border: none;
+  color: #e7b615;
+  font-size: 46px;
+  font-weight: 600;
+}
+
+.btn__blocked {
+  cursor: default;
+  background-color: #e61c1c;
+  text-decoration: line-through;
+}
+
+.btn__blocked:hover {
+  background-color: #8f1a1a;
+}
+
+.dice__num {
+  list-style: none;
+  width: 150px;
+  height: 180px;
+  border-radius: 20px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  vertical-align: top;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: wrap;
+      flex-flow: wrap;
+}
+
+.dice__point {
+  width: 50%;
+  text-align: left;
+}
+
+.dice__point div {
+  content: "";
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(231, 182, 21, 0);
+  vertical-align: middle;
+}
+
+.dice__point:nth-child(2) {
+  text-align: right;
+}
+
+.dice__point:nth-child(3) {
+  width: 33.33%;
+}
+
+.dice__point:nth-child(4) {
+  text-align: center;
+  width: 33.33%;
+}
+
+.dice__point:nth-child(5) {
+  text-align: right;
+  width: 33.33%;
+}
+
+.dice__point:nth-child(7) {
+  text-align: right;
+}
+
+.num1 .point4 {
+  background-color: #e7b615;
+}
+
+.num2 .point1,
+.num2 .point7 {
+  background-color: #e7b615;
+}
+
+.num3 .point1,
+.num3 .point4,
+.num3 .point7 {
+  background-color: #e7b615;
+}
+
+.num4 .point1,
+.num4 .point2,
+.num4 .point6,
+.num4 .point7 {
+  background-color: #e7b615;
+}
+
+.num5 .point1,
+.num5 .point2,
+.num5 .point4,
+.num5 .point6,
+.num5 .point7 {
+  background-color: #e7b615;
+}
+
+.num6 .point1,
+.num6 .point2,
+.num6 .point3,
+.num6 .point5,
+.num6 .point6,
+.num6 .point7 {
+  background-color: #e7b615;
+}
